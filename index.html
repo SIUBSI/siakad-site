@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIUBSI</title>
+    <link rel="icon" href="./assets/images/logo.png" type="image/x-icon">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Box Icons -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/form.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar Start -->
+    <nav class="navbar">
+        <a href="./" class="navbar-logo">SI<span>UBSI</span></a>
+
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Section Start -->
+    <section class="hero" id="home">
+        <main class="content">
+            <p>Selamat datang di <span>SIAKAD</span>.</p>
+            <p>atau <span>Sistem Informasi</span> Akademik</p>
+            <a href="#pengertian" class="cta">Apa itu SIAKAD</a>
+            <a href="#form" class="cta">Berikan Saran</a>
+            <a href="https://discord.gg/NC3yHscNqV" target="_blank"><box-icon name='discord-alt' type='logo'></box-icon></a>
+            <a href="https://github.com/SIUBSI" target="_blank"><box-icon name='github' type='logo'></box-icon></a>
+            <!-- <a href="https://siubsi.netlify.app/docs" target="_blank" class="cta">Beralih ke Mode - Lebih Detail</a> -->
+        </main>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Form Section Start -->
+    <section id="form" class="container">
+        <form autocomplete="off" method="POST" action="<?= BASE_URL . 'process/process_login.php' ?>">
+            <h1 id="message">Saran</h1><small id="smallMessage"></small>
+            <span>Berikan saran untuk Website ini.</span>
+            <div class="field">
+                <input id="saran" type="text" name="saran" placeholder="Masukkan Saran" autocomplete="new-password"/>
+                <label for="saran">Password</label>
+            </div>
+            <button id="masuk">Kirim</button>
+        </form>
+    </section>
+    <!-- Form Section End -->
+
+    <!-- Footer Start -->
+    <footer>
+        <div class="credit">
+            <p>Dibuat oleh <a href="">Kelompok 7</a> | &copy; 2023.</p>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Feather Icons -->
+    <script>
+        feather.replace()
+    </script>
+
+    <!-- JS Form Login/Register -->
+    <script src="./assets/js/form.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+.container {
+    height: 620px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    color: white;
+    /* margin-top: 50px;*/
+    margin-bottom: 130px;
+}
+
+.container h1 {
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #000;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    width: 430px;
+    height: 430px;
+    padding: 2rem 2rem 2rem 2rem;
+    position: relative;
+}
+
+form::before,
+form::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease;
+}
+
+form::before {
+    z-index: -1;
+    background: transparent;
+    transform: translateX(-3.5rem) translateY(-3.75rem);
+    border: 6px solid #2f2f2f;
+    border-radius: 20px;
+}
+
+form::after {
+    background: #2f2f2f4a;
+    border-radius: 20px;
+    z-index: -2;
+    transform: translateX(-2rem) translateY(-2.25rem);
+}
+
+form:focus-within {
+    border-radius: 20px;
+    background: #2f2f2f4a;
+}
+
+form:focus-within::before {
+    width: 0%;
+    height: 0%;
+    transform: translatex(0px) translatey(0px);
+}
+
+form .field {
+    display: flex;
+    flex-flow: column-reverse;
+    justify-content: center;
+    margin-bottom: 0.5em;
+}
+
+form label,
+form input {
+    transition: all 0.3s ease;
+    touch-action: manipulation;
+}
+
+form label {
+    opacity: 0;
+}
+
+form input {
+    padding: 10px 20px;
+    border: 4px solid white;
+    margin: 0 1.5rem;
+    background-color: transparent !important;
+    -webkit-appearance: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+
+form input:-webkit-autofill {
+    background-color: transparent !important;
+    /* -webkit-box-shadow: 0 0 0px 1000px #0ea8ec inset; */
+    -webkit-text-fill-color: white !important;
+}
+
+form input::-moz-placeholder {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #000;
+}
+
+form input:-ms-input-placeholder {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #000;
+}
+
+form input::placeholder {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #000;
+}
+
+form input:focus {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #000000;
+    font-weight: bold;
+    outline: 0;
+    border: 6px solid #2f2f2f4a;
+}
+
+form input::-webkit-input-placeholder {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    opacity: 1;
+    -webkit-transition: inherit;
+    transition: inherit;
+}
+
+form input:focus::-webkit-input-placeholder {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    opacity: 0;
+}
+
+form button {
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 0.85rem 1rem;
+    margin-top: 2rem;
+    background-color: #2f2f2f;
+    color: #fff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    width: 65%;
+    position: absolute;
+    bottom: -20px;
+    right: 18%;
+    letter-spacing: 0.15em;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    border: 6px solid #2f2f2f4a;
+}
+
+form p {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+    margin: 0.5rem 1.5rem 1.75rem 1.5rem;
+}
+
+form p.success-message {
+    font-size: 1.25rem;
+    text-align: center;
+    line-height: 2rem;
+    margin: 1.5rem auto 5rem auto;
+}
