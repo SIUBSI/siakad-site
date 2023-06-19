@@ -13,9 +13,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
     <!-- Box Icons -->
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
@@ -32,26 +34,35 @@
     <nav class="navbar">
         <a href="./" class="navbar-logo">SI<span>UBSI</span></a>
 
+        <div class="navbar-nav">
+            <a href="#pengertian">Pengertian</a>
+            <a href="#team">Team</a>
+            <a href="#saran">Saran</a>
+        </div>
+        
+        <div class="navbar-extra">
+            <a href="#" id="search"><i data-feather="search"></i></a>
+        </div>
+
     </nav>
     <!-- Navbar End -->
 
     <!-- Hero Section Start -->
     <section class="hero" id="home">
         <main class="content">
-            <p>Selamat datang di <span>SIAKAD</span>.</p>
-            <p>atau <span>Sistem Informasi</span> Akademik</p>
+            <h1>Selamat datang di <span>SIAKAD-SIUBSI</span>.</h1>
+            <p>Berisi tentang Pengenalan Apa itu <abbr title="Sistem Informasi AKademik">SIAKAD</abbr> dan sebagainya.</p>
             <a href="#pengertian" class="cta">Apa itu SIAKAD</a>
-            <a href="#form" class="cta">Berikan Saran</a>
-            <a href="https://discord.gg/NC3yHscNqV" target="_blank"><box-icon name='discord-alt' type='logo'></box-icon></a>
-            <a href="https://github.com/SIUBSI" target="_blank"><box-icon name='github' type='logo'></box-icon></a>
-            <!-- <a href="https://siubsi.netlify.app/docs" target="_blank" class="cta">Beralih ke Mode - Lebih Detail</a> -->
+            <abbr title="Forum Komunitas SIUBSI (Discord Server)"><a href="https://discord.gg/NC3yHscNqV" target="_blank"><box-icon name='discord-alt' type='logo'></box-icon></a></abbr>
+            <abbr title="Forum Komunitas SIUBSI (GitHub)"><a href="https://github.com/SIUBSI" target="_blank"><box-icon name='github' type='logo'></box-icon></a></abbr></br>
+            <a href="#saran" class="cta-saran">Mohon berikan Saran untuk keberlangsunan berjalan-nya Website kami<i class='bx bx-chevron-right'></i></a>
         </main>
     </section>
     <!-- Hero Section End -->
 
-    <!-- Form Section Start -->
-    <section id="form" class="container">
-        <form autocomplete="off" method="POST" action="<?= BASE_URL . 'process/process_login.php' ?>">
+    <!-- Form Saran Section Start -->
+    <section id="saran" class="container">
+        <form autocomplete="off" action="#">
             <h1 id="message">Saran</h1><small id="smallMessage"></small>
             <span>Berikan saran untuk Website ini.</span>
             <div class="field">
@@ -61,7 +72,7 @@
             <button id="masuk">Kirim</button>
         </form>
     </section>
-    <!-- Form Section End -->
+    <!-- Form Saran Section End -->
 
     <!-- Footer Start -->
     <footer>
