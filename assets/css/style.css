@@ -25,9 +25,7 @@ html {
 body {
     font-family: 'Poppins', sans-serif;
     background-image: url("../images/bg.jpg");
-    /* background-color: var(--bg); */
-    /* color: #fff; */
-    /* min-height: 5000px; */
+    align-items: center;
 }
 
 /* Navbar */
@@ -88,6 +86,10 @@ body {
 
 .navbar .navbar-extra a:hover {
     color: var(--primary);
+}
+
+#hamburger-menu {
+    display: none;
 }
 
 /* Hero Section */
@@ -158,7 +160,6 @@ body {
     font-weight: 300;
 }
 
-
 .hero .content .cta {
     margin-top: 1rem;
     display: inline-block;
@@ -191,6 +192,250 @@ body {
     border-bottom: 2px solid #fff;
 }
 
+/* Team Section */
+.team {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.wrapper {
+    margin-left: 20%;
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.wrapper i {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 2rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    color: #000;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+}
+
+.wrapper i:active {
+    transform: translateY(-50%) scale(0.85);
+}
+
+.wrapper i:first-child {
+    left: -22px;
+}
+
+.wrapper i:last-child {
+    right: -22px;
+}
+
+.wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+}
+
+.carousel :where(.card, .img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel .card {
+    scroll-snap-align: start;
+    height: 342px;
+    list-style: none;
+    /* background: #fff; */
+    background-image: url("../images/bg.jpg");
+    cursor: pointer;
+    padding-bottom: 15px;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+.carousel .card .img {
+    background: #505050;
+    height: 148px;
+    width: 148px;
+    border-radius: 50%;
+}
+
+.card .img img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.carousel .card h2 {
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin: 30px 0 5px;
+}
+
+.carousel .card span {
+    color: #6A6D78;
+    font-size: 1.31rem;
+}
+
+/* Saran Section */
+.saran {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.form-container {
+    margin-left: 35%;
+    margin-bottom: 50px;
+    width: 500px;
+    height: 350px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 10px;
+    transition: height 0.2s ease;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.form-container.active {
+    height: 590px;
+}
+
+.form-container .form-wrapper {
+    width: 1000px;
+    display: flex;
+}
+
+.form-container .form-wrapper section {
+    width: 500px;
+    background-image: url("../images/bg.jpg");
+}
+
+.form-container img {
+    cursor: pointer;
+}
+
+.form-container .post {
+    transition: margin-left 0.18s ease;
+}
+
+.form-container.active .post {
+    margin-left: -500px;
+}
+
+.post header {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 17px 0;
+    text-align: center;
+    border-bottom: 1px solid #bfbfbf;
+}
+
+.post form {
+    margin: 20px 25px;
+}
+
+.post form .content,
+.audience .list li .column {
+    display: flex;
+    align-items: center;
+}
+
+.post form .content img {
+    cursor: default;
+    max-width: 52px;
+}
+
+.post form .content .details {
+    margin: -3px 0 0 12px;
+}
+
+form .content .details p {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+form :where(textarea, button) {
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+form textarea {
+    color: #fff;
+    resize: none;
+    font-size: 18px;
+    margin-top: 30px;
+    min-height: 100px;
+    background: transparent;
+}
+
+form textarea::placeholder {
+    color: rgba(211, 211, 211, 1);
+}
+
+form textarea:focus::placeholder {
+    color: rgba(211, 211, 211, 0.5);
+}
+
+form button {
+    height: 53px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #BCC0C4;
+    cursor: no-drop;
+    border-radius: 7px;
+    background: #e2e5e9;
+    transition: all 0.3s ease;
+}
+
+form textarea:valid~button {
+    color: #fff;
+    cursor: pointer;
+    background: #4599FF;
+}
+
+form textarea:valid~button:hover {
+    background: #1a81ff;
+}
+
 /* Footer Section */
 footer {
     background-color: var(--primary);
@@ -212,6 +457,10 @@ footer .credit a {
 
 footer .credit a:hover {
     color: rgb(92, 176, 255);
+}
+
+footer .credit p {
+    color: #fff;
 }
 
 /* Box Icon */
@@ -258,14 +507,14 @@ abbr:hover::after {
 
 /* Media Queries */
 /* Laptop */
-@media (max-width: 1366px) {
+@media only screen and (max-width: 1366px) {
     html {
         font-size: 70%;
     }
 }
 
 /* Tablet */
-@media (max-width: 768px) {
+@media only screen and (max-width: 900px) {
     html {
         font-size: 62.5%;
     }
@@ -314,10 +563,41 @@ abbr:hover::after {
         margin-right: 0;
         margin-bottom: 10px;
     }
+
+    .wrapper {
+        margin-left: 0%;
+    }
+
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+
+    .carousel .card h2 {
+        font-size: 2rem;
+    }
+
+    .carousel .card span {
+        font-size: 2rem;
+    }
+
+    .form-container {
+        margin-left: 20%;
+        width: 500px;
+        height: 415px;
+    }
+
+    form :where(textarea, button) {
+        width: 100%;
+        margin-top: 5%;
+    }
+
+    form textarea {
+        min-height: 150px;
+    }
 }
 
 /* Mobile Phone */
-@media (max-width: 576px) {
+@media only screen and (max-width: 600px) {
     html {
         font-size: 55%;
     }
@@ -328,5 +608,44 @@ abbr:hover::after {
 
     abbr:hover::after {
         opacity: 0;
+    }
+
+    .wrapper {
+        margin-left: 0;
+    }
+
+    .wrapper i {
+        font-size: 4rem;
+    }
+
+    .wrapper .carousel {
+        grid-auto-columns: 100%;
+    }
+
+    .carousel .card h2 {
+        font-size: 2rem;
+    }
+
+    .carousel .card span {
+        font-size: 2rem;
+    }
+
+    .form-container {
+        margin-left: 1%;
+        width: 380px;
+        height: 415px;
+    }
+
+    .post header {
+        margin-left: -20%;
+    }
+
+    form :where(textarea, button) {
+        width: 74%;
+        margin-top: 5%;
+    }
+
+    form textarea {
+        min-height: 150px;
     }
 }
