@@ -34,7 +34,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 7%;
-    background: rgba(255, 255, 255, 0.2);
+    background-image: url("../images/bg.jpg");
     border-bottom: 1px solid #513c28;
     /* justify-content: start; */
     position: fixed;
@@ -438,20 +438,28 @@ form textarea:valid~button:hover {
 
 /* Footer Section */
 footer {
-    background-color: var(--primary);
     text-align: center;
     padding: 1.5rem;
-    /* margin-top: 2rem; */
     padding-bottom: 2rem;
+    /* background-image: url("../images/bg.jpg");
+    background-position: left bottom; */
+    /* margin-top: 2rem; */
 }
 
 footer .credit {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid #000;
     font-size: 0.9rem;
     font-weight: 700;
+    background-image: url("../images/bg.jpg");
+    background-position: left;
+    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.23);
 }
 
 footer .credit a {
-    color: #fff;
+    color: #000;
     font-weight: 700;
 }
 
@@ -460,7 +468,7 @@ footer .credit a:hover {
 }
 
 footer .credit p {
-    color: #fff;
+    color: #000;
 }
 
 /* Box Icon */
