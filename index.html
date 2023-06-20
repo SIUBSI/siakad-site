@@ -24,7 +24,6 @@
 
     <!-- Style -->
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/form.css">
 
 </head>
 
@@ -41,14 +40,14 @@
         </div>
         
         <div class="navbar-extra">
-            <a href="#" id="search"><i data-feather="search"></i></a>
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
         </div>
 
     </nav>
     <!-- Navbar End -->
 
     <!-- Hero Section Start -->
-    <section class="hero" id="home">
+    <section id="home" class="hero">
         <main class="content">
             <h1>Selamat datang di <span>SIAKAD-SIUBSI</span>.</h1>
             <p>Berisi tentang Pengenalan Apa itu <abbr title="Sistem Informasi AKademik">SIAKAD</abbr> dan sebagainya.</p>
@@ -60,17 +59,59 @@
     </section>
     <!-- Hero Section End -->
 
+    <section id="team" class="team">
+        <div class="wrapper">
+            <i id="left-arrow" class='bx bx-chevron-left'></i>
+            <ul class="carousel">
+                <li class="card">
+                    <div class="img"><img src="./assets/images/kocheng.png" alt="img" draggable="false"></div>
+                    <h2>Muhamad Khadaffy</h2>
+                    <span>Head Project</span>
+                </li>
+                <li class="card">
+                    <div class="img"><img src="./assets/images/kocheng.png" alt="img" draggable="false"></div>
+                    <h2>Asyffa Elsa Hakim</h2>
+                    <span>Creative</span>
+                </li>
+                <li class="card">
+                    <div class="img"><img src="./assets/images/kocheng.png" alt="img" draggable="false"></div>
+                    <h2>Adetyas Alfarizza R.</h2>
+                    <span>Creative</span>
+                </li>
+                <li class="card">
+                    <div class="img"><img src="./assets/images/kocheng.png" alt="img" draggable="false"></div>
+                    <h2>Rifdah Dzakiyyah</h2>
+                    <span>Creative</span>
+                </li>
+                <li class="card">
+                    <div class="img"><img src="./assets/images/kocheng.png" alt="img" draggable="false"></div>
+                    <h2>Muhammad Mannan</h2>
+                    <span>Creative</span>
+                </li>
+            </ul>
+            <i id="right-arrow" class='bx bx-chevron-right'></i>
+        </div>
+    </section>
+
     <!-- Form Saran Section Start -->
-    <section id="saran" class="container">
-        <form autocomplete="off" action="#">
-            <h1 id="message">Saran</h1><small id="smallMessage"></small>
-            <span>Berikan saran untuk Website ini.</span>
-            <div class="field">
-                <input id="saran" type="text" name="saran" placeholder="Masukkan Saran" autocomplete="new-password"/>
-                <label for="saran">Password</label>
+    <section id="saran" class="saran">
+        <div class="form-container">
+            <div class="form-wrapper">
+                <section class="post">
+                    <header>Kirim Saran</header>
+                    <form action="#">
+                        <div class="content">
+                            <img src="./assets/images/logo.png" alt="logo">
+                            <div class="details">
+                                <p>SIUBSI</p>
+                            </div>
+                        </div>
+                        <textarea placeholder="Berikan saran untuk Website ini atau untuk Komunitas SIUBSI" spellcheck="false" required></textarea>
+                        <button>Kirim</button>
+                    </form>
+                </section>
             </div>
-            <button id="masuk">Kirim</button>
-        </form>
+        </div>
     </section>
     <!-- Form Saran Section End -->
 
@@ -88,7 +129,7 @@
     </script>
 
     <!-- JS Form Login/Register -->
-    <script src="./assets/js/form.js"></script>
+    <script src="./assets/js/script.js"></script>
 
 </body>
 
