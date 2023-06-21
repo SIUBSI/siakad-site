@@ -81,7 +81,7 @@ body {
 }
 
 .navbar .navbar-extra a {
-    color: #fff;
+    color: #000;
     margin: 0 0.5rem;
 }
 
@@ -94,7 +94,7 @@ body {
 }
 
 /* Hero Section */
-.hero, .pembahasan, .bahasan1 {
+.hero, .team, .saran, .pembahasan, .bahasan1 {
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -102,7 +102,7 @@ body {
     position: relative;
 }
 
-.hero::after, .pembahasan::after, .bahasan1::after {
+.hero::after, .team::after, .saran::after, .pembahasan::after, .bahasan1::after {
     content: '';
     display: block;
     position: absolute;
@@ -296,7 +296,7 @@ body {
 .form-container {
     margin-left: 35%;
     margin-bottom: 50px;
-    width: 500px;
+    max-width: 500px;
     height: 350px;
     overflow: hidden;
     background: #fff;
@@ -360,8 +360,10 @@ body {
 }
 
 form .content .details p {
-    font-size: 17px;
-    font-weight: 500;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    padding-top: 5px;
 }
 
 form :where(textarea, button) {
@@ -445,19 +447,21 @@ footer .credit p {
 }
 
 /* Box Icon */
-box-icon {
+.box-icon {
+    color: #000;
     cursor: pointer;
-    transform: scale(2);
-    margin-left: 30px;
+    transform: scale(2.3);
+    margin-left: 35px;
     border: 1px solid rgba(0, 0, 0, 0.3);
     border-radius: 50%;
     padding: 2px;
     transition: 0.3s linear;
 }
 
-box-icon:hover {
+.box-icon:hover {
     color: #fff;
-    background-color: rgba(0, 0, 0, 0.3);
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    background-color: #000;
 }
 
 i {
@@ -591,7 +595,7 @@ abbr:hover::after {
         position: absolute;
         top: 100%;
         right: -100%;
-        background-color: rgba(255, 255, 255, 1);
+        background-image: url("../images/bg.jpg");
         border: 1px solid #000;
         width: 30rem;
         height: 100vh;
@@ -657,6 +661,10 @@ abbr:hover::after {
 
     form textarea {
         min-height: 150px;
+    }
+
+    footer .credit {
+        font-size: 1.5rem;
     }
 }
 
@@ -725,6 +733,10 @@ abbr:hover::after {
     .bahasan1 .informasi .penyusun span {
         color: #000;
         font-weight: 700;
+        font-size: 1.5rem;
+    }
+
+    footer .credit {
         font-size: 1.5rem;
     }
 }
