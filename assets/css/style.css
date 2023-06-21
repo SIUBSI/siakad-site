@@ -94,7 +94,7 @@ body {
 }
 
 /* Hero Section */
-.hero, .team, .saran, .pembahasan, .bahasan1 {
+.hero, .team, .saran, .pembahasan, .artikel {
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -102,7 +102,7 @@ body {
     position: relative;
 }
 
-.hero::after, .team::after, .saran::after, .pembahasan::after, .bahasan1::after {
+.hero::after, .team::after, .saran::after, .pembahasan::after, .artikel::after {
     content: '';
     display: block;
     position: absolute;
@@ -111,7 +111,7 @@ body {
     bottom: 0;
 }
 
-.hero .content, .pembahasan .content, .bahasan1 .informasi {
+.hero .content, .pembahasan .content, .artikel .informasi {
     padding: 5rem 7%;
     /* background-color: red; */
     /* max-width: 60rem; */
@@ -529,17 +529,17 @@ abbr:hover::after {
     text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
 }
 
-/* Bahasan1 Section */
-.bahasan1 .informasi h2 {
+/* Artikel Section */
+.artikel .informasi h2 {
     font-size: 3rem;
     text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
 }
 
-.bahasan1 .informasi h2 span {
+.artikel .informasi h2 span {
     font-size: 1.5rem;
 }
 
-.bahasan1 .informasi .penyusun {
+.artikel .informasi .penyusun {
     display: inline-flex;
     align-items: center;
     padding-left: 10px;
@@ -547,30 +547,36 @@ abbr:hover::after {
     text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
 }
 
-.bahasan1 .informasi .penyusun img {
+.artikel .informasi .penyusun img {
     border: 1px solid #000;
     border-radius: 50%;
     box-shadow: 2px 2px 3px #000;
 }
 
-.bahasan1 .informasi .penyusun p {
+.artikel .informasi .penyusun p {
     padding-left: 10px;
 }
 
-.bahasan1 .informasi .penyusun span {
+.artikel .informasi .penyusun span {
     color: #000;
     font-weight: 700;
     font-size: 1rem;
 }
 
-.bahasan1 .informasi .content {
+.artikel .informasi .content {
     margin-top: 30px;
     margin-left: 10px;
 }
 
-.bahasan1 .informasi .content p {
+.artikel .informasi .content p {
     font-size: 1.2rem;
     /* text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5); */
+}
+
+.artikel .informasi .content ol li {
+    margin-left: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 /* Media Queries */
@@ -721,16 +727,16 @@ abbr:hover::after {
         min-height: 150px;
     }
 
-    .bahasan1 .informasi .penyusun img {
+    .artikel .informasi .penyusun img {
         transform: scale(0.8);
     }
 
-    .bahasan1 .informasi .penyusun p {
+    .artikel .informasi .penyusun p {
         font-size: 1.5rem;
         padding-left: 5px;
     }
 
-    .bahasan1 .informasi .penyusun span {
+    .artikel .informasi .penyusun span {
         color: #000;
         font-weight: 700;
         font-size: 1.5rem;
