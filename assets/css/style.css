@@ -93,7 +93,7 @@ body {
 }
 
 /* Hero Section */
-.hero {
+.hero, .pembahasan, .bahasan1 {
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -101,7 +101,7 @@ body {
     position: relative;
 }
 
-.hero::after {
+.hero::after, .pembahasan::after, .bahasan1::after {
     content: '';
     display: block;
     position: absolute;
@@ -110,34 +110,7 @@ body {
     bottom: 0;
 }
 
-.hero .breadcrumb {
-    position: absolute;
-    left: 135px;
-    top: 300px;
-    color: #fff;
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-
-.hero .breadcrumb-status {
-    display: inline-block;
-    background-color: rgba(0, 0, 0, 0.9);
-    padding: 7px 10px;
-    border-radius: 10px;
-}
-
-.hero .breadcrumb a {
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-}
-
-.hero .breadcrumb a:hover {
-    color: rgb(92, 176, 255);
-}
-
-.hero .content {
+.hero .content, .pembahasan .content, .bahasan1 .informasi {
     padding: 5rem 7%;
     /* background-color: red; */
     /* max-width: 60rem; */
@@ -155,7 +128,7 @@ body {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.hero .content p {
+.hero .content p, .pembahasan .content p {
     font-size: 1.5rem;
     font-weight: 300;
 }
@@ -172,7 +145,6 @@ body {
     margin-right: 20px;
     transition: 0.2s linear;
 }
-
 
 .hero .content .cta:hover {
     opacity: 0.5;
@@ -513,6 +485,89 @@ abbr:hover::after {
     z-index: 1;
 }
 
+/* Pembahasan Section */
+.pembahasan .content h1 {
+    font-size: 5rem;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.pembahasan .content .breadcrumb span {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.pembahasan .content .breadcrumb a {
+    color: #000;
+    transform: scaleX(0);
+    border-bottom: 1px solid #000;
+}
+
+.pembahasan .content .breadcrumb a:hover {
+    transform: scaleX(0.5);
+    /* border-bottom: 2px solid #000; */
+}
+
+.pembahasan ul li a {
+    color: #000;
+    text-decoration: none;
+}
+
+.pembahasan ul li a:hover {
+    border-bottom: 1px solid #000;
+}
+
+.pembahasan ul li {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+/* Bahasan1 Section */
+.bahasan1 .informasi h2 {
+    font-size: 3rem;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.bahasan1 .informasi h2 span {
+    font-size: 1.5rem;
+}
+
+.bahasan1 .informasi .penyusun {
+    display: inline-flex;
+    align-items: center;
+    padding-left: 10px;
+    padding: 8px;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.bahasan1 .informasi .penyusun img {
+    border: 2px solid #000;
+    border-radius: 50%;
+    box-shadow: 2px 2px 3px #000;
+}
+
+.bahasan1 .informasi .penyusun p {
+    padding-left: 10px;
+}
+
+.bahasan1 .informasi .penyusun span {
+    color: #000;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.bahasan1 .informasi .content {
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.bahasan1 .informasi .content p {
+    font-size: 1.2rem;
+    /* text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5); */
+}
+
 /* Media Queries */
 /* Laptop */
 @media only screen and (max-width: 1366px) {
@@ -655,5 +710,20 @@ abbr:hover::after {
 
     form textarea {
         min-height: 150px;
+    }
+
+    .bahasan1 .informasi .penyusun img {
+        transform: scale(0.8);
+    }
+
+    .bahasan1 .informasi .penyusun p {
+        font-size: 1.5rem;
+        padding-left: 5px;
+    }
+
+    .bahasan1 .informasi .penyusun span {
+        color: #000;
+        font-weight: 700;
+        font-size: 1.5rem;
     }
 }
