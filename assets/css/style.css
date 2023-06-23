@@ -579,6 +579,10 @@ abbr:hover::after {
     font-weight: 600;
 }
 
+.artikel .informasi .content ul {
+    margin-left: 20px;
+}
+
 /* Media Queries */
 /* Laptop */
 @media only screen and (max-width: 1366px) {
