@@ -100,15 +100,21 @@
             <div class="form-wrapper">
                 <section class="post">
                     <header>Kirim Saran</header>
-                    <form action="#">
+                    <form action="https://formspree.io/f/mbjvryle" method="POST">
                         <div class="content">
                             <img src="./assets/images/logo.png" alt="logo">
                             <div class="details">
                                 <p>SIUBSI</p>
                             </div>
                         </div>
-                        <textarea placeholder="Berikan saran untuk Website ini atau untuk Komunitas SIUBSI" spellcheck="false" required></textarea>
-                        <button>Kirim</button>
+                        <div>
+                            <input type="name" placeholder="Masukkan Nama anda" name="name">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Masukkan Email anda" name="email">
+                        </div>
+                        <textarea name="message" id="message" placeholder="Berikan saran untuk Website ini atau untuk Komunitas SIUBSI" spellcheck="false" required></textarea>
+                        <button type="submit">Kirim</button>
                     </form>
                 </section>
             </div>
